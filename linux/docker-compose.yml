@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app: 
+    image: ubuntu
+    container_name: Ubuntu
+    tty: true
+    command: /bin/sh -c "apt-get update &&\
+     apt-get install -y build-essential curl file git"
+    
+    
