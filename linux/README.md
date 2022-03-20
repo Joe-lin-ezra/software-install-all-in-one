@@ -49,7 +49,7 @@
     brew install mysql
 ```
 
-> :warning: must run under administrator status  
+> :warning: ubuntu inside docker-containers is non-root os  
 
 ## Update
 
