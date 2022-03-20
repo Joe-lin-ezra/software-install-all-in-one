@@ -67,7 +67,15 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     sudo apt-get install -y build-essential curl file git
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    rm -fr $(brew --repo homebrew/core)
+    brew tap homebrew/core
+    brew install docker
+    brew install docker-compose
+    brew install openjdk@11
+    brew install python@3.10
+    brew install node
+    brew install mysql
   SHELL
 end
